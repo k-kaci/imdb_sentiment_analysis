@@ -26,7 +26,6 @@ class LSTM(nn.Module):
         # we have only one output
         # input (512) = 128 + 128 for mean and same for max pooling
         self.out = nn.Linear(512, 1)
-
     def forward(self, x):
         # pass data through embedding layer
         x = self.embedding(x)
