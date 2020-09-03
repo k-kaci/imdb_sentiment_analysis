@@ -3,6 +3,7 @@ import torch
 class IMDBDataset:
     def __init__(self, reviews, targets):
         """
+        IMDBDataset returns one sample of the training or validation data
         :param reviews: this is a numpy array
         :param targets: a vector, numpy array
         """
