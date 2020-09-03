@@ -13,8 +13,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 if __name__ == "__main__":
-    # rezd the training data
-    df = pd.read_csv("../input/imbd.csv")
+    # read the training data
+    df = pd.read_csv("../input/imdb.csv")
 
     # map positive to 1 and negative to 0
     df.sentiment =  df.sentiment.map(lambda x: 1 if x== "positive" else 0)
