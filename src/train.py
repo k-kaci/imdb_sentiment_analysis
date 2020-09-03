@@ -120,7 +120,6 @@ def run(df, fold):
         if early_stopping_counter > 2: break
 
 
-
 if __name__ == "__main__":
     df = pd.read_csv("../input/imdb_folds.csv")
     # train for all folds
