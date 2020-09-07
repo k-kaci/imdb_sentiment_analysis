@@ -122,6 +122,7 @@ def run(df, fold):
 
 if __name__ == "__main__":
     df = pd.read_csv("../input/imdb_folds.csv")
+    df = df.sample(10)
     # train for all folds
     run(df, fold=0)
     run(df, fold=1)
