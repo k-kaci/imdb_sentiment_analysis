@@ -12,7 +12,7 @@ class IMDBDataset:
     def __len__(self):
         len(self.reviews)
     def __getitem__(self, item):
-        review = self.reviews[item, :]
+        review = str(self.reviews[item, :])
         target = self.target[item]
         return {"review": torch.tensor(review, dtype=torch.long),
                 "target": torch.tensor(target, dtype=torch.float)}
