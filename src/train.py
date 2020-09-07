@@ -80,7 +80,7 @@ def run(df, fold):
     embedding_matrix = create_embedding_matrix(tokenizer.word_index,
                                                embedding_dict)
     # create torch device, since we use gpu, we are using cuda
-    device = torch.device("cuda")
+    device = torch.device("cpu")
 
     # fetch our LSTM model
     model = lstm.LSTM(embedding_matrix)
@@ -122,7 +122,7 @@ def run(df, fold):
 
 if __name__ == "__main__":
     df = pd.read_csv("../input/imdb_folds.csv")
-    df = df.sample(10)
+    df = df.sample(100)
     # train for all folds
     run(df, fold=0)
     run(df, fold=1)
